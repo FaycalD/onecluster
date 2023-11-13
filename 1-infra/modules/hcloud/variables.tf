@@ -1,28 +1,28 @@
 variable "cluster_name" {
-    type = string
+  type = string
 }
 
 variable "nodes" {
-    type = map(object({
-        name         = string
-        server_type  = string
-        private_ip   = string
-    }))
+  type = map(object({
+    name        = string
+    server_type = string
+    private_ip  = string
+  }))
 }
 
 variable "load_balancer" {
-    type = object({
-        type        = string
-        private_ip  = string
-    })
+  type = object({
+    type       = string
+    private_ip = string
+  })
 }
 
 variable "network_name" {
-  type=string
+  type = string
 }
 
 variable "hcloud_location" {
-  type=string
+  type    = string
   default = "nbg1"
 }
 

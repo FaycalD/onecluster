@@ -10,7 +10,7 @@ resource "hcloud_server" "cloud_nodes" {
   image       = "ubuntu-20.04" 
   server_type = each.value.server_type
   location    = var.hcloud_location
-  ssh_keys    = ["access1"]
+  ssh_keys    = ["accesskey"]
 }
 
 resource "hcloud_volume" "volumes" {

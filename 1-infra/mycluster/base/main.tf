@@ -8,16 +8,16 @@ provider "hcloud" {
 
 module "base" {
   source = "../../modules/base"
-  
-  bastion ={
-    name = "bastion"
+
+  bastion = {
+    name        = "bastion"
     server_type = "cx31"
-    private_ip   = "10.0.0.2"    
+    private_ip  = "10.0.0.2"
   }
-  network_name="mycluster-main"
+  network_name = "mycluster-main"
 }
 
-output "bastion_ip"{
-  value = module.base.bastion_ip
+output "bastion_ip" {
+  value       = module.base.bastion_ip
   description = "Bastion Server IP"
 }
